@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <template id="inherit_backend" name="inherit backend" inherit_id="web.assets_backend" >
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/my_custom/static/src/js/main.js"></script>
+            </xpath>
+        </template>
+    </data>
+</odoo>
