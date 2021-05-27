@@ -4,8 +4,8 @@
         <div class="row">
             <div class="col-md-6">
                 <button class="btn btn-primary"  id="start">Start</button>
-                <button class="btn btn-warning" id="pause">Pause</button>
-                <button class="btn btn-danger" id="stop">Stop</button>
+                <button class="btn btn-warning"   id="pause">Pause</button>
+                <button class="btn btn-danger"   id="stop">Stop</button>
             </div>
              <div class="col-md-6">
                <span t-esc="widget.duration" class="counter" />

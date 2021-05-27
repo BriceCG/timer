@@ -50,6 +50,8 @@ odoo.define('my_custom.timer',function(require){
 
         _start_count: function(){
             var self = this
+            self.$('#start').hide()
+            self.$('#pause').show()
             // When starting the counter update the is_started field to True if not true
             if (! self.task.is_started){
                 this._rpc({
@@ -60,6 +62,7 @@ odoo.define('my_custom.timer',function(require){
                 }]
                 }).then(function(data){
                     self.task.is_started = true
+
                 })
             }
             // Update the count timer
@@ -77,6 +80,8 @@ odoo.define('my_custom.timer',function(require){
         },
         _pause_count: function(){
             var self = this;
+             self.$('#pause').hide()
+             self.$('#start').show()
             if (self.task.is_started){
                 this._rpc({
                   model: 'project.task',
@@ -87,6 +92,7 @@ odoo.define('my_custom.timer',function(require){
                 }]
                 }).then(function(data){
                     self.task.is_started = false;
+
                 })
             }
 
